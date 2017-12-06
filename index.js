@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const findAnagrams = require('find-anagrams');
 const meow = require('meow');
 const openFile = require('./src/open-file');
