@@ -15,7 +15,7 @@ const cli = meow(
       $ ana silent --file words.txt --json
       {
         "word": "listen",
-          "anagrams": [
+         "anagrams": [
             "listen",
             "elints",
             "enlist",
@@ -23,7 +23,7 @@ const cli = meow(
             "silent",
             "slinte",
             "tinsel"
-          ]
+        ]
       }
 `,
     {
@@ -45,6 +45,12 @@ const word = cli.input[0];
 const { file, json } = cli.flags;
 
 (async function main() {
+    if (!word) {
+        console.error('Please provide a search word!');
+
+        return;
+    }
+
     const data = await openFile(file);
 
     const words = data.replace('\r').split('\n');
