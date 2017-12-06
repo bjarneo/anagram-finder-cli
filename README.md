@@ -39,7 +39,7 @@ Usage
 
   Options
     --file, -f  The dictionary to search for anagrams
-    --json, -j  Output to json
+    --json, -j  Output to json (CSV default)
 
   Examples
     $ ana silent --file words.txt --json
