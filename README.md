@@ -1,6 +1,5 @@
 anagram finder cli
 ======
-![Travis](https://travis-ci.org/bjarneo/anagram-finder-cli.svg?branch=master)
 
 What is this?
 ------
@@ -64,12 +63,6 @@ Feel free to add your dictionary
 
 * [English](https://github.com/dwyl/english-words)
 * [Norwegian](https://github.com/0301/ordliste)
-
-Test
-------
-```bash
-$ npm test
-```
 
 Contribution
 ------
