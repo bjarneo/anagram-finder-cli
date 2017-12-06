@@ -65,6 +65,12 @@ const { file, json } = cli.flags;
 
     const anagrams = findAnagrams(words, word);
 
+    if (!anagrams.length) {
+        console.log('No anagrams found..');
+
+        return;
+    }
+
     if (json) {
         const toJson = JSON.stringify({ word, anagrams }, 0, 2);
 
