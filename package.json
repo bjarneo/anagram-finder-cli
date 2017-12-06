@@ -1,0 +1,30 @@
+{
+  "name": "anagram-finder-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "ana": "./index"
+  },
+  "scripts": {
+    "prettier": "prettier --config .prettierrc --write '*.js'",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run prettier",
+      "git add"
+    ]
+  },
+  "author": "Bjarne Oeverli",
+  "license": "MIT",
+  "dependencies": {
+    "find-anagrams": "^1.1.0",
+    "meow": "^4.0.0"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.1"
+  }
+}
