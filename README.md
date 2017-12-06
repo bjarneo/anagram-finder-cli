@@ -34,27 +34,27 @@ tinsel
 Usage
 ```bash
 
-  Usage
-    $ ana <word> --file words.txt --json
+    Usage
+      $ ana <word> --file words.txt --json
 
-  Options
-    --file, -f  The dictionary to search for anagrams
-    --json, -j  Output to json (CSV default)
+    Options
+      --file, -f  The dictionary to search for anagrams
+      --json, -j  Output to json
 
-  Examples
-    $ ana silent --file words.txt --json
-    {
-      "word": "listen",
-        "anagrams": [
-          "listen",
-          "elints",
-          "enlist",
-          "inlets",
-          "silent",
-          "slinte",
-          "tinsel"
+    Examples
+      $ ana silent --file words.txt --json
+      {
+        "word": "listen",
+         "anagrams": [
+            "listen",
+            "elints",
+            "enlist",
+            "inlets",
+            "silent",
+            "slinte",
+            "tinsel"
         ]
-    }
+      }
 
 ```
 
