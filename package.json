@@ -1,7 +1,7 @@
 {
   "name": "anagram-finder-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "This CLI makes it possible to search for anagrams from a provided dictionary file",
   "main": "index.js",
   "bin": {
     "ana": "./index"
@@ -34,7 +34,9 @@
     "anagrams",
     "find",
     "find-anagrams",
-    "cli"
+    "cli",
+    "dictionary",
+    "wordlist"
   ],
   "repository": {
     "type": "git",
