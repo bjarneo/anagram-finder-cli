@@ -51,6 +51,12 @@ const { file, json } = cli.flags;
         return;
     }
 
+    if (!file) {
+        console.error('Please provide a dictionary!');
+
+        return;
+    }
+
     const data = await openFile(file);
 
     const words = data.replace('\r').split('\n');
