@@ -2,6 +2,7 @@
 
 const findAnagrams = require('find-anagrams');
 const meow = require('meow');
+const Ora = require('ora');
 const openFile = require('./src/open-file');
 
 const cli = meow(
@@ -51,17 +52,22 @@ const word = cli.input[0];
 
 const { file, json, csv } = cli.flags;
 
+const spinner = new Ora(main, {
+    text: 'Searching for words..',
+    color: 'yellow'
+}).start();
+
 (async function main() {
     if (!word) {
-        console.error('Please provide a search word!');
+        spinner.fail('Please provide a search word!');
 
-        return;
+        process.exit(1);
     }
 
     if (!file) {
-        console.error('Please provide a dictionary!');
+        spinner.fail('Please provide a dictionary!');
 
-        return;
+        process.exit(1);
     }
 
     const data = await openFile(file);
@@ -71,10 +77,12 @@ const { file, json, csv } = cli.flags;
     const anagrams = findAnagrams(words, word);
 
     if (!anagrams.length) {
-        console.log('No anagrams found..');
+        spinner.fail('No anagrams found..');
 
-        return;
+        process.exit(1);
     }
+
+    spinner.stop();
 
     if (json) {
         const toJson = JSON.stringify({ word, anagrams }, 0, 2);

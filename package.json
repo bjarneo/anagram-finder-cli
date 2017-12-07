@@ -20,7 +20,8 @@
   "license": "MIT",
   "dependencies": {
     "find-anagrams": "^1.1.0",
-    "meow": "^4.0.0"
+    "meow": "^4.0.0",
+    "ora": "^1.3.0"
   },
   "devDependencies": {
     "husky": "^0.14.3",
