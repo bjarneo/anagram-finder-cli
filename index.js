@@ -85,7 +85,7 @@ const spinner = new Ora({
     spinner.stop();
 
     if (json) {
-        const toJson = JSON.stringify({ word, anagrams }, 0, 2);
+        const toJson = JSON.stringify({ word, anagrams, count: anagrams.length }, 0, 2);
 
         console.log(toJson);
     } else if (csv) {
