@@ -52,7 +52,7 @@ const word = cli.input[0];
 
 const { file, json, csv } = cli.flags;
 
-const spinner = new Ora(main, {
+const spinner = new Ora({
     text: 'Searching for words..',
     color: 'yellow'
 }).start();
