@@ -32,13 +32,13 @@ tinsel
 
 Usage
 ```bash
-
     Usage
       $ ana <word> --file words.txt --json
 
     Options
       --file, -f  The dictionary to search for anagrams
       --json, -j  Output to json
+      --csv,  -c  Output to csv
 
     Examples
       $ ana silent --file words.txt --json
@@ -54,7 +54,6 @@ Usage
             "tinsel"
         ]
       }
-
 ```
 
 Dictionaries

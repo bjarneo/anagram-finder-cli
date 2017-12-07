@@ -12,6 +12,7 @@ const cli = meow(
     Options
       --file, -f  The dictionary to search for anagrams
       --json, -j  Output to json
+      --csv,  -c  Output to csv
 
     Examples
       $ ana silent --file words.txt --json
@@ -38,13 +39,17 @@ const cli = meow(
                 type: 'boolean',
                 alias: 'j',
             },
+            csv: {
+                type: 'boolean',
+                alias: 'c',
+            },
         },
     }
 );
 
 const word = cli.input[0];
 
-const { file, json } = cli.flags;
+const { file, json, csv } = cli.flags;
 
 (async function main() {
     if (!word) {
@@ -75,8 +80,9 @@ const { file, json } = cli.flags;
         const toJson = JSON.stringify({ word, anagrams }, 0, 2);
 
         console.log(toJson);
-    } else {
-        // CSV format
+    } else if (csv) {
         console.log(anagrams.join(', '));
+    } else {
+        console.log(anagrams.join('\n'));
     }
 })();
