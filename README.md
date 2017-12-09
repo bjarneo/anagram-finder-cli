@@ -44,15 +44,16 @@ Usage
       $ ana silent --file words.txt --json
       {
         "word": "listen",
-         "anagrams": [
-            "listen",
-            "elints",
-            "enlist",
-            "inlets",
-            "silent",
-            "slinte",
-            "tinsel"
-        ]
+        "anagrams": [
+          "listen",
+          "elints",
+          "enlist",
+          "inlets",
+          "silent",
+          "slinte",
+          "tinsel"
+        ],
+        "count": 7
       }
 ```
 
