@@ -27,7 +27,8 @@ const cli = meow(
             "silent",
             "slinte",
             "tinsel"
-        ]
+        ],
+        "count": 7
       }
 `,
     {
