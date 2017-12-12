@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
+const { promisify } = require('util');
 const findAnagrams = require('find-anagrams');
 const meow = require('meow');
 const Ora = require('ora');
-const openFile = require('./src/open-file');
+const openFile = promisify(require('fs').readFile);
 
 const cli = meow(
     `
@@ -71,7 +72,7 @@ const spinner = new Ora({
         process.exit(1);
     }
 
-    const data = await openFile(file);
+    const data = await openFile(file, 'utf8');
 
     const words = data.replace('\r').split('\n');
 
